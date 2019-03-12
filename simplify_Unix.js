@@ -1,7 +1,7 @@
 var simplify = function(epochTime) {
     let lastSeen = 'Last seen: ';
-    let currentTime = Date.now()/1000;
-    let elapsed = currentTime - epochTime;
+    const currentTime = Date.now()/1000;
+    const elapsed = currentTime - epochTime;
     const toMins = mins => Math.floor(mins/60);
     const toHours = hours => Math.floor(toMins(hours)/60);
     const toDays = days => Math.floor(toHours(days)/24);

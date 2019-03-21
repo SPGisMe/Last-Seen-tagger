@@ -1,4 +1,4 @@
-var simplify = function(epochTime) {
+_lastSeen = function(epochTime) {
     let lastSeen = 'Last seen: ';
     const currentTime = Date.now();
     const elapsed = currentTime - epochTime;
@@ -14,4 +14,10 @@ var simplify = function(epochTime) {
     : lastSeen += toDays(elapsed) + ' days ago';
 
     return lastSeen;
+}
+
+_memberSince = function(epochTime) {
+    const since = new Date();
+
+    return `${since.getDate()}/${since.getMonth()}/${since.getFullYear()}`;
 }

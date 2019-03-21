@@ -17,7 +17,7 @@ _lastSeen = function(epochTime) {
 }
 
 _memberSince = function(epochTime) {
-    const since = new Date();
+    const since = new Date(epochTime);
 
     return `${since.getDate()}/${since.getMonth()}/${since.getFullYear()}`;
 }

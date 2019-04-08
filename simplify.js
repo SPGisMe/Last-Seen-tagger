@@ -1,7 +1,7 @@
-_lastSeen = function(epochTime) {
+_lastSeen = function(epochTime) { // make epochTime the timestamp of the users' last login
     let lastSeen = 'Last seen: ';
     const currentTime = Date.now();
-    const elapsed = currentTime - epochTime;
+    const elapsed = currentTime - epochTime; //elapsed will be time since the last login in ms
     const toMins = mins => Math.floor((mins/1000)/60);
     const toHours = hours => Math.floor(toMins(hours)/60);
     const toDays = days => Math.floor(toHours(days)/24);
@@ -16,7 +16,7 @@ _lastSeen = function(epochTime) {
     return lastSeen;
 }
 
-_memberSince = function(epochTime) {
+_memberSince = function(epochTime) { // use for static join date
     const since = new Date(epochTime);
 
     return `${since.getDate()}/${since.getMonth()}/${since.getFullYear()}`;
